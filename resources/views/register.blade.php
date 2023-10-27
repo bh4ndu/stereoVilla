@@ -7,9 +7,9 @@
     <title>regístrate!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" href="img/post/logo-stereovilla.png" type="image/x-icon">
-
+    <link rel="stylesheet" type="text/css" href="login-register.css">
 </head>
-<body>
+<body style="background-color: rgb(34, 30, 30);">
     <main class="container align-center p-5">
         <form method="POST" action="{{route('validar-registro')}}">
             @csrf
@@ -25,7 +25,7 @@
                 <label for="userInput" class="form-label">nombre de usuario</label>
                 <input type="text" class="form-control" id="userInput" name="name" required autocomplete="disabled">
             </div>
-            <button type="submit" class="btn btn-primary">registrarse</button>
+            <button style="background-color: yellow; color: black; font-weight: bold; border: 2px solid; font-weight: bold; border-radius: 5px;" type="submit" class="btn btn-primary">registrarse</button>
         </form>
     </main>    
 </body>

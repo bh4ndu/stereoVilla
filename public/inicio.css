@@ -1,0 +1,30 @@
+.container {
+    display: block;
+    text-align: center;
+    padding: 70px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+p {
+    color: white;
+    font-weight: bold;
+}
+
+.mb-3 input {
+    background-color: yellow;
+    border: 3px;
+    border-style: solid;
+    color: black;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+button {
+    background-color: yellow;
+}
