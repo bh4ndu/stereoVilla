@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 route::view('/login', "login")->name('login');
 route::view('/registro', "register")->name('registro');
-route::post('/validar-usuario',[LoginController::class,'register'])->name('validar-registro');
-route::post('/iniciar-sesion', [LoginController::class, 'login'])->name('iniciar-sesion');
+route::post('/inicio',[LoginController::class,'register'])->name('validar-registro');
+route::post('/inicio', [LoginController::class, 'login'])->name('iniciar-sesion');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 

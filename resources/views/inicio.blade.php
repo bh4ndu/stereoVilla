@@ -11,18 +11,24 @@
 
 </head>
 <body>
+    <div id="sidebar">
+      <ul>
+        <li>
+          <img src="img/post/logo-stereovilla.png" style="width: 140px; height: 140px;" alt="Logo Fazt" class="logo">
+        </li>
+        <a href="/inicio"><li>Home</li></a>
+        <a href="#"><li>about</li></a>
+        <a href="#"><li>contact</li></a>
+
+      </ul>
+    </div>
     <div class="container">
         <header class="d-flex flex-warp align-items-center justify-content-center justify-content-md-between py-3 mb-4 border bottom">
-            <a class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" href="">
-                sesion iniciada <br> bienvenido administrador!
-            </a>
-            <div class="col-md-3 text-end">
-                <a href="{{route('logout')}}"><button type="button" class="btn btn-outline-primary me-2">salir</button></a>
+            <p style="color: black; margin-left: 10px; font-size: 28px;">sesion iniciada exitosamente, bienvenido administrador!</p>
+            <div class="col-md-2 text-end">
+                <a href="{{route('logout')}}"><button type="button" class="btn btn-outline-primary me-2" style="text-decoration: none; color: white; background-color: black;">salir</button></a>
             </div>
         </header>
     </div>
-    <article class="container">
-        <h2>contenido futuro del area de administrador</h2>
-    </article>
 </body>
 </html>

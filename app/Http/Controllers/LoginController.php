@@ -9,43 +9,45 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function register (Request $request){
-        //validar datos
+    public function register(Request $request)
+    {
+        // Validar datos
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
 
-        $user-> save();
+        $user->save();
 
         Auth::login($user);
         return view('inicio');
     }
-    
 
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
         $credentials = [
             "email" => $request->email,
             "password" => $request->password,
         ];
-        return view('inicio');
-    
-        if (Auth::attempt($credentials, $remember)) {
+
+        if (Auth::attempt($credentials)) {
+            // Si las credenciales son correctas, iniciar sesión y redirigir a la vista 'inicio'
             $request->session()->regenerate();
-            $request->session()->start(); // Iniciar una nueva sesión
+            return view('inicio');
         } else {
-            return view('login');
+            // Si las credenciales son incorrectas, mostrar un mensaje de error
+            return view('login')->with('error', 'Acceso denegado, usuario inexistente');
         }
     }
-    
-    public function logout (Request $request){
+
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return view('login');
     }
-
 }
 
 
